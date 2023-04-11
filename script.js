@@ -1,14 +1,10 @@
-const flag = true;
-let firstVariable;
-var secondVariable;
+// pass via individual values
+restTest("a", "b", "c", "d", "e");
 
-if (flag) {
-    firstVariable = "a";
+// pass via array/spread syntax
+let letters = ["a", "b", "c", "d", "e"];
+restTest(...letters);
+
+function restTest(...letters) {
+    letters.forEach(char => console.log(char));
 }
-
-if (flag) {
-    secondVariable = "b";
-}
-
-console.log(firstVariable);
-console.log(secondVariable);
