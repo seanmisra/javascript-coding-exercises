@@ -1,12 +1,9 @@
-const testArr = [1, 2, 3, 4, 5];
-let [val1, val2, val3, val4, val5] = testArr;
+let vals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(val1); // 1
-console.log(val2); // 2
-console.log(val3); // 3
-console.log(val4); // 4
-console.log(val5); // 5
+vals.filter(x => x < 6).map(y => "VALUE: " + y).forEach(z => console.log(z));
 
-let [firstVal, ...otherVals] = testArr;
-console.log(firstVal); // 1
-console.log(...otherVals) // [2, 3, 4, 5]
+// VALUE: 1
+// VALUE: 2
+// VALUE: 3
+// VALUE: 4
+// VALUE: 5

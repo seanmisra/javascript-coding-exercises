@@ -7,3 +7,4 @@ Commits correspond to each exercise
 3. Example of using a rest parameter (pass values individually and using spread syntax)
 4. Diff btw == and ===
 5. Example of array destructuring, including w/ spread syntax
+6. Demonstrate using lambdas with the array functions map/filter/forEach (chaining)
