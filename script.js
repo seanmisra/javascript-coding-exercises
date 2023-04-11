@@ -1,19 +1,12 @@
-// CONDITION 1 and 3 will pass, 2 will fail
+const testArr = [1, 2, 3, 4, 5];
+let [val1, val2, val3, val4, val5] = testArr;
 
-if ("3" == 3) {
-    console.log("CONDITION 1 PASSED");
-} else {
-    console.log("CONDITION 1 FAILED");
-}
+console.log(val1); // 1
+console.log(val2); // 2
+console.log(val3); // 3
+console.log(val4); // 4
+console.log(val5); // 5
 
-if ("3" === 3) {
-    console.log("CONDITION 2 PASSED");
-} else {
-    console.log("CONDITION 2 FAILED");
-}
-
-if (3 === 3) {
-    console.log("CONDITION 3 PASSED");
-} else {
-    console.log("CONDITION 3 FAILED");
-}
+let [firstVal, ...otherVals] = testArr;
+console.log(firstVal); // 1
+console.log(...otherVals) // [2, 3, 4, 5]
