@@ -1,9 +1,38 @@
-let vals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+class House {
+    constructor (windows, doors, rooms) {
+        this.windows = windows;
+        this.doors = doors;
+        this.rooms = rooms;
+    }
 
-vals.filter(x => x < 6).map(y => "VALUE: " + y).forEach(z => console.log(z));
+    openDoor() {
+        console.log("Open door");
+    }
+}
 
-// VALUE: 1
-// VALUE: 2
-// VALUE: 3
-// VALUE: 4
-// VALUE: 5
+// example of shallow copy 
+const houseOne = new House(30, 20, 10);
+const houseTwo = houseOne;
+
+houseOne.windows = 18;
+
+// both have 18 windows
+console.log(houseOne);
+console.log(houseTwo);
+
+// make hard copy with JSON
+console.log("WITH JSON functions");
+const houseThree = JSON.parse(JSON.stringify(houseOne));
+houseOne.windows = 17;
+
+console.log(houseOne);
+console.log(houseTwo);
+console.log(houseThree); // This will still be 18!
+
+houseOne.openDoor();
+houseTwo.openDoor();
+try {
+    houseThree.openDoor();
+} catch {
+    console.log("JSON cloning will not clone the methods");
+}
