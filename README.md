@@ -9,3 +9,4 @@ Commits correspond to each exercise
 5. Example of array destructuring, including w/ spread syntax
 6. Demonstrate using lambdas with the array functions map/filter/forEach (chaining)
 7. Use JSON to make a hard copy of an object
+8. Use NaN
