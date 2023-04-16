@@ -10,3 +10,4 @@ Commits correspond to each exercise
 6. Demonstrate using lambdas with the array functions map/filter/forEach (chaining)
 7. Use JSON to make a hard copy of an object
 8. Use NaN
+9. Callbacks vs. Promise Chaining vs. async/await
