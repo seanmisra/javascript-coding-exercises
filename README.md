@@ -11,3 +11,4 @@ Commits correspond to each exercise
 7. Use JSON to make a hard copy of an object
 8. Use NaN
 9. Callbacks vs. Promise Chaining vs. async/await
+10. Closures - demonstrate usage with a counter

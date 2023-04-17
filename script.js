@@ -1,83 +1,25 @@
-// **callbacks**
-function makeFrame (nextStep) {
-    setTimeout(() => {
-        console.log("made frame");
-        nextStep();
-    }, 5000);
+function isolatedFunction() {
+    let counter = 0;
+    counter++;
+    return counter;
 }
 
-function makeWalls (nextStep) {
-    setTimeout(() => {
-        console.log("made walls");
-        nextStep();        
-    }, 5000)
+// will always be 1 (bc counter is stored on the stack)
+console.log(isolatedFunction());
+console.log(isolatedFunction());
+console.log(isolatedFunction());
+
+
+function outerFunction() {
+    let counter = 0;
+
+    return function increment() {
+        return ++counter;
+    }
 }
 
-function paintHouse () {
-    setTimeout(() => {
-        console.log("painted house");
-        console.log("finished callbacks");
-    }, 5000)
-}
-
-
-function buildHouseOne () {
-    makeFrame(
-        function() { makeWalls(
-            function() {
-                paintHouse()
-            }
-        )}
-    )       
-}
-buildHouseOne();
-
-
-
-// **Using promises**
-function makeFrameTwo() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("made frame");
-            resolve();
-        }, 5000)
-    });
-}
-
-
-function makeWallsTwo() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("made walls");
-            resolve();
-        }, 5000)
-    });
-}
-
-function paintHouseTwo() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("painted house");
-            resolve();
-        }, 5000)
-    });
-}
-
-function buildHouseTwo () {
-    return makeFrameTwo().then(() => {
-        return makeWallsTwo();
-    }).then(() => {
-        return paintHouseTwo();
-    }).then(() => console.log("finished promise chaining"));
-}
-buildHouseTwo();
-
-
-// **using await/async**
-async function buildHouseThree () {
-    await makeFrameTwo();
-    await makeWallsTwo();
-    await paintHouseTwo();
-    console.log("finished async/await");
-}
-buildHouseThree();
+let incrementFunc = outerFunction();
+// will be 1, 2, 3, bc counter count is stored on heap (not stack)
+console.log(incrementFunc());
+console.log(incrementFunc());
+console.log(incrementFunc());
