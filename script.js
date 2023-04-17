@@ -1,25 +1,10 @@
-function isolatedFunction() {
-    let counter = 0;
-    counter++;
-    return counter;
-}
+// !! converts to a boolean
+let testOne = !!10;
+let testTwo = !!0;
+let testThree = !!"Hello";
+let testFour = !!null;
 
-// will always be 1 (bc counter is stored on the stack)
-console.log(isolatedFunction());
-console.log(isolatedFunction());
-console.log(isolatedFunction());
-
-
-function outerFunction() {
-    let counter = 0;
-
-    return function increment() {
-        return ++counter;
-    }
-}
-
-let incrementFunc = outerFunction();
-// will be 1, 2, 3, bc counter count is stored on heap (not stack)
-console.log(incrementFunc());
-console.log(incrementFunc());
-console.log(incrementFunc());
+console.log(testOne);
+console.log(testTwo);
+console.log(testThree);
+console.log(testFour);
