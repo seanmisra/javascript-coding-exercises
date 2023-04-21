@@ -22,3 +22,4 @@ Commits correspond to each exercise
 18. Undefined vs Null
 19. try/catch/finally basic example
 20. generate a random number between 1 and 5
+21. Get unique values from array with duplicates using Set
