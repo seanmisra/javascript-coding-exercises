@@ -1,18 +1,14 @@
-const myObj = {
-    firstProp: "hello",
-    secondProp: 10,
-    thirdProp: false
+loopOne: for (let i = 0; i < 5; i++) {
+    console.log("LOOP: ", i + 1);
+    loopTwo: for (let x = 0; x < 20; x++) {
+        if (x % 2 !== 0) {
+            continue;
+        } else if (i > 1) {
+            console.log("EXITING...");
+            break loopOne; 
+        }
+        console.log(x); // print even numbers less than 20 TWO times.
+    }
 }
 
-console.log(myObj.secondProp); // get prop, 10
-console.log(myObj['secondProp']); // get prop alt, 10
-
-const {secondProp} = myObj 
-console.log(secondProp); // could also get the prop with destructuring
-
-myObj.secondProp = 20;
-console.log(myObj.secondProp); // prop is set to 20
-delete myObj.secondProp;
-console.log(myObj.secondProp); // prop is now undefined after deleting
-
-console.log(myObj.firstProp); // testing, first prop unaffected
+// NOTE, continue could be replaced with continue loopTwo with the same effect
