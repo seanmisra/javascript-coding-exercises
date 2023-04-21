@@ -1,9 +1,12 @@
 const myArr = [1, 2, 3, 4, 5];
+const evenArr = [2, 4, 6];
 
-const singleVal = myArr.find(numb => numb === 1);
-console.log(typeof singleVal); // number
-console.log(singleVal); // 1
+const isEven = numb => numb % 2 === 0;
 
-const arrVal = myArr.filter(numb => numb === 1);
-console.log(typeof arrVal); // object
-console.log(arrVal); // [1]
+const anyEven = myArr.some(isEven);
+const allEven = myArr.every(isEven);
+const allEvenTwo = evenArr.every(isEven);
+
+console.log(anyEven); // true
+console.log(allEven); // false
+console.log(allEvenTwo); // true
