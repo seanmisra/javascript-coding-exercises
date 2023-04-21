@@ -1,12 +1,11 @@
-const myArr = [1, 2, 3, 4, 5];
+let valOne = undefined;
+let valTwo = null;
+let valThree;
 
-const sum = myArr.reduce((total, nextVal) => {
-    return total + nextVal
-});
-console.log("sum", sum); // 15
+console.log(valOne);
+console.log(valTwo);
+console.log(valThree);
 
-// can also include initial value
-const sumTwo = myArr.reduce((total, nextVal) => {
-    return total + nextVal;
-}, -15);
-console.log("sumTwo", sumTwo); // 0
+console.log(valOne === valThree); // true: undeclared defaults to undefined
+console.log(valOne === valTwo); // false: undefined !== null
+console.log(!!valOne === !!valTwo); // true: both undefined and null are falsey

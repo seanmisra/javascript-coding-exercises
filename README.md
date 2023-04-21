@@ -19,3 +19,4 @@ Commits correspond to each exercise
 15. Arrays - shift vs unshift
 16. Arrays - pop vs push
 17. Arrays - reduce (ex: sum)
+18. Undefined vs Null
