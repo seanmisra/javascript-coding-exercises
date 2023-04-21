@@ -1,11 +1,18 @@
-let valOne = undefined;
-let valTwo = null;
-let valThree;
+try {
+    console.log(x); // try to log undefined variable
+} catch (e) {
+    // gets caught
+    console.log(e)
+} finally {
+    console.log("finally executed");
+}
 
-console.log(valOne);
-console.log(valTwo);
-console.log(valThree);
+const x = 10;
 
-console.log(valOne === valThree); // true: undeclared defaults to undefined
-console.log(valOne === valTwo); // false: undefined !== null
-console.log(!!valOne === !!valTwo); // true: both undefined and null are falsey
+try {
+    console.log(x); // x is now defined
+} catch (e) {
+    console.log(e)
+} finally {
+    console.log("finally is still executed");
+}
