@@ -1,4 +1,6 @@
-let arrWithDuplicates = [1, 1, 2, 2, 2, 3, 3, 4];
-let uniqueArr = [...new Set(arrWithDuplicates)];
-
-console.log(uniqueArr); // [1, 2, 3, 4]
+console.log(!!false);
+console.log(!!"");
+console.log(!!null);
+console.log(!!NaN);
+console.log(!!undefined);
+console.log(!!0);
