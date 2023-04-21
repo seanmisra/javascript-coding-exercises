@@ -1,8 +1,12 @@
 const myArr = [1, 2, 3, 4, 5];
-const lastElement = myArr.pop();
-console.log(lastElement); // 5
-console.log(myArr); //[1, 2, 3, 4, 5];
-myArr.push(5); // put back last element
-console.log(myArr); // [1, 2, 3, 4, 5]
-myArr.push(6, 7); // add two more elements to end
-console.log(myArr); // [1, 2, 3, 4, 5, 6, 7]
+
+const sum = myArr.reduce((total, nextVal) => {
+    return total + nextVal
+});
+console.log("sum", sum); // 15
+
+// can also include initial value
+const sumTwo = myArr.reduce((total, nextVal) => {
+    return total + nextVal;
+}, -15);
+console.log("sumTwo", sumTwo); // 0
