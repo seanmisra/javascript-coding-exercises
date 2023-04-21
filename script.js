@@ -1,7 +1,10 @@
 const myArr = [1, 2, 3, 4, 5];
+const firstElement = myArr.shift(); // remove first element
+console.log(firstElement); // 1
+console.log(myArr); //[2, 3, 4, 5];
 
-const secondArr = myArr.map(numb => numb + 1);
-console.log(secondArr);
+myArr.unshift(1); // put back first element
+console.log(myArr); //[1, 2, 3, 4, 5];
 
-const thirdArr = myArr.flatMap(numb => [numb + 1]);
-console.log(thirdArr); // it will be same as secondArr, because result is flattened by one level;
+myArr.unshift(-1, 0); // add two elements to front
+console.log(myArr); // [-1, 0, 1, 2, 3, 4, 5];

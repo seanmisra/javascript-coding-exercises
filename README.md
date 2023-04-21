@@ -16,3 +16,4 @@ Commits correspond to each exercise
 12. Arrays - find vs filter
 13. Arrays - every vs some
 14. Arrays - map vs flatmap
+15. Arrays - shift vs unshift
