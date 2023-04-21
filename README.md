@@ -25,3 +25,4 @@ Commits correspond to each exercise
 21. Get unique values from array with duplicates using Set
 22. 6 falsey values in javascript
 23. Currying - simple example
+24. Object destructuring

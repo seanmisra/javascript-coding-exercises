@@ -1,24 +1,34 @@
-function curry(fn) {
-    return function(a) {
-        console.log("first val", a);
-        return function (b) {
-            console.log("second val", b);
-            return fn(a, b);
-        }
-    }
-}
+const animalObj = {
+    type: "dog",
+    animalName: "Spot",
+    canFly: false,
+    canBark: true,
+    age: 4,
+    traits: ["friendly", "smart", "playful"]
+};
 
-function sum(a, b) {
-    return a + b;
-}
+const {type, animalName, canFly, canBark, age, traits} = animalObj;
 
-const firstSum = sum(5, 4); 
-console.log("firstSum", firstSum); // 9
+console.log(type);
+console.log(animalName);
+console.log(canFly);
+console.log(canBark);
+console.log(age);
+console.log(traits);
 
-const currySum = curry(sum);
-const secondSum = currySum(5)(4); // 5 and 4 are logged
-console.log("secondSum", secondSum); // 9
+// could also destructure assigning different names
+const {
+    type: animalType,
+    animalName: thisAnimalName, // avoid duplicate name
+    canFly: animalCanFly,
+    canBark: animalCanBark,
+    age: animalAge,
+    traits: animalTraits
+} = animalObj;
 
-// for testing
-const test = currySum(5); // just 5 will be logged
-console.log(test); // will be a function
+console.log(animalType);
+console.log(thisAnimalName);
+console.log(animalCanFly);
+console.log(animalCanBark);
+console.log(animalAge);
+console.log(animalTraits);
