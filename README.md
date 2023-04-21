@@ -17,3 +17,4 @@ Commits correspond to each exercise
 13. Arrays - every vs some
 14. Arrays - map vs flatmap
 15. Arrays - shift vs unshift
+16. Arrays - pop vs push
