@@ -24,3 +24,4 @@ Commits correspond to each exercise
 20. generate a random number between 1 and 5
 21. Get unique values from array with duplicates using Set
 22. 6 falsey values in javascript
+23. Currying - simple example
