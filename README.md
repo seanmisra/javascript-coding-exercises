@@ -26,3 +26,4 @@ Commits correspond to each exercise
 22. 6 falsey values in javascript
 23. Currying - simple example
 24. Object destructuring
+25. Demonstrate how to get out of timer interval (setInterval/clearInterval)
