@@ -1,10 +1,9 @@
-// !! converts to a boolean
-let testOne = !!10;
-let testTwo = !!0;
-let testThree = !!"Hello";
-let testFour = !!null;
+const myArr = [1, 2, 3, 4, 5];
 
-console.log(testOne);
-console.log(testTwo);
-console.log(testThree);
-console.log(testFour);
+const singleVal = myArr.find(numb => numb === 1);
+console.log(typeof singleVal); // number
+console.log(singleVal); // 1
+
+const arrVal = myArr.filter(numb => numb === 1);
+console.log(typeof arrVal); // object
+console.log(arrVal); // [1]

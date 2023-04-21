@@ -13,3 +13,4 @@ Commits correspond to each exercise
 9. Callbacks vs. Promise Chaining vs. async/await
 10. Closures - demonstrate usage with a counter
 11. Use of !! (double bang)
+12. Arrays - find vs filter
