@@ -15,3 +15,4 @@ Commits correspond to each exercise
 11. Use of !! (double bang)
 12. Arrays - find vs filter
 13. Arrays - every vs some
+14. Arrays - map vs flatmap

@@ -1,12 +1,7 @@
 const myArr = [1, 2, 3, 4, 5];
-const evenArr = [2, 4, 6];
 
-const isEven = numb => numb % 2 === 0;
+const secondArr = myArr.map(numb => numb + 1);
+console.log(secondArr);
 
-const anyEven = myArr.some(isEven);
-const allEven = myArr.every(isEven);
-const allEvenTwo = evenArr.every(isEven);
-
-console.log(anyEven); // true
-console.log(allEven); // false
-console.log(allEvenTwo); // true
+const thirdArr = myArr.flatMap(numb => [numb + 1]);
+console.log(thirdArr); // it will be same as secondArr, because result is flattened by one level;
