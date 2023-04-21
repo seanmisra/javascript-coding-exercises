@@ -27,3 +27,4 @@ Commits correspond to each exercise
 23. Currying - simple example
 24. Object destructuring
 25. Demonstrate how to get out of timer interval (setInterval/clearInterval)
+26. Get/Set/Delete object prop (get 3 different ways)

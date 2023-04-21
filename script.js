@@ -1,8 +1,18 @@
-const myInterval = setInterval(() => {
-    console.log("...Cycled...");
-}, 1000); // will cycle every second
+const myObj = {
+    firstProp: "hello",
+    secondProp: 10,
+    thirdProp: false
+}
 
-setTimeout(() => {
-    clearInterval(myInterval);
-    console.log("Stopped cycling!");
-}, 7000); // after 7 seconds stop cycling
+console.log(myObj.secondProp); // get prop, 10
+console.log(myObj['secondProp']); // get prop alt, 10
+
+const {secondProp} = myObj 
+console.log(secondProp); // could also get the prop with destructuring
+
+myObj.secondProp = 20;
+console.log(myObj.secondProp); // prop is set to 20
+delete myObj.secondProp;
+console.log(myObj.secondProp); // prop is now undefined after deleting
+
+console.log(myObj.firstProp); // testing, first prop unaffected
