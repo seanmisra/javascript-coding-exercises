@@ -1,28 +1,24 @@
-class Animal {
-    constructor(name, animalType, isPet = false, canFly = false) {
-        this.name = name;
-        this.animalType = animalType;
-        this.isPet = isPet;
-        this.canFly = canFly;
-    }
-}
+// FIRST METHOD
+const myArr = [1, 2, 3, 4, 5];
+delete myArr[0];
+console.log(myArr); // notice that element 0 is now empty
+console.log(myArr.length) // 5
 
-const myDog = new Animal("Spot", "canine", true);
-const myCat = new Animal("Furry", "feline", true);
-const myParrot = new Animal("Polly", "bird", true, true);
-const myLion = new Animal("Roary", "lion");
+// SECOND METHOD
+let myArrTwo = [1, 2, 3, 4, 5];
+myArrTwo = myArrTwo.filter(x => x !== 1);
+console.log(myArrTwo);
+console.log(myArrTwo.length); // 4
 
-const allAnimals = [myDog, myCat, myParrot, myLion];
+// THIRD METHOD
+const myArrThree = [1, 2, 3, 4, 5];
+myArrThree.shift();
+console.log(myArrThree);
+console.log(myArrThree.length); // 4
 
-// NOW sort these four by name
-allAnimals.sort((a, b) => {
-    if (a.name > b.name) {
-        return 1;
-    } else if (a.name < b.name) {
-        return -1;
-    } else {
-        return 0;
-    }
-});
-
-console.log(allAnimals);
+// FOURTH METHOD
+const myArrFour = [1, 2, 3, 4, 5];
+const index = myArrFour.indexOf(1);
+myArrFour.splice(index, 1); 
+console.log(myArrFour);
+console.log(myArrFour.length); // 4
