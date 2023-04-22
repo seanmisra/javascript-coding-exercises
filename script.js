@@ -1,26 +1,20 @@
-let myObject = {
-    test: 1,
-    testTwo: 2
-};
-
-Object.freeze(myObject);
-
-myObject.testThree = 3;
-console.log(myObject); // testThree prop is NOT added
-
-myObject.testTwo = 22;
-console.log(myObject); // testTwo is NOT modified
+const test = "hello";
 
 
-let myObjectTwo = {
-    test: 1,
-    testTwo: 2
-};
-
-Object.seal(myObjectTwo);
-
-myObjectTwo.testThree = 3;
-console.log(myObjectTwo); // testThree prop is NOT added
-
-myObjectTwo.testTwo = 22;
-console.log(myObjectTwo);  // testTwo IS MODIFIED
+// will output 1 / 2 / 3
+switch (test) {
+    case "hello":
+        console.log(1);
+        // purposely omit break
+    case "greetings":
+        console.log(2);
+        //purposely omit break
+    case "bonjour":
+        console.log(3);
+        break;
+    case "goodbye":
+        console.log(4);
+        break;
+    default:
+        console.log("ERROR");
+}

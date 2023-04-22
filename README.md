@@ -32,3 +32,4 @@ Commits correspond to each exercise
 28. DOM vs BOM (retrieve a prop from each)
 29. String concatenation (demonstrate how order matters)
 30. Object.freeze() vs Object.seal()
+31. Switch example
