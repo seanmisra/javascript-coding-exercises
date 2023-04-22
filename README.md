@@ -29,3 +29,4 @@ Commits correspond to each exercise
 25. Demonstrate how to get out of timer interval (setInterval/clearInterval)
 26. Get/Set/Delete object prop (get 3 different ways)
 27. use continue/break with nested loops (labels)
+28. DOM vs BOM (retrieve a prop from each)
