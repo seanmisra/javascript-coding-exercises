@@ -34,3 +34,4 @@ Commits correspond to each exercise
 30. Object.freeze() vs Object.seal()
 31. Switch example
 32. Class constructor example (include at least one default value)
+33. Sort an array of objects by a given property
