@@ -31,3 +31,4 @@ Commits correspond to each exercise
 27. use continue/break with nested loops (labels)
 28. DOM vs BOM (retrieve a prop from each)
 29. String concatenation (demonstrate how order matters)
+30. Object.freeze() vs Object.seal()
