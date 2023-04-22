@@ -1,8 +1,5 @@
-// wrap so that body is defined
-window.onload = function() {
-    // window is for BOM; innerHeight is an example prop
-    console.log(window.innerHeight);
+const testOne = "1" + 2 + 3;
+const testTwo = 1 + 2 + "3";
 
-    // document is for DOM; offsetHeight is an exampel prop
-    console.log(document.body.offsetHeight);
-};
+console.log(testOne); // 123
+console.log(testTwo); // 33

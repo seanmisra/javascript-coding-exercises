@@ -30,3 +30,4 @@ Commits correspond to each exercise
 26. Get/Set/Delete object prop (get 3 different ways)
 27. use continue/break with nested loops (labels)
 28. DOM vs BOM (retrieve a prop from each)
+29. String concatenation (demonstrate how order matters)
