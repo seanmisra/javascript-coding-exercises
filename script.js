@@ -1,28 +1,31 @@
-function bubbleSort(arr) {
-    let swapped = false;
+// array needs to be sorted
+function binarySearch(arr, val, start = 0, end = arr.length - 1) {
+    const middleIndex = Math.floor((start + end) / 2);
+    const middleVal = arr[middleIndex];
+    
+    if (val === middleVal) {
+        return middleIndex;
+    }
 
-    do {
-        swapped = false;
-        for (let i = 0; i < arr.length; i++) {
-            const valOne = arr[i];
-            const valTwo = arr[i + 1];
+    if (start >= end) {
+        return -1;
+    }
 
-            if (valOne > valTwo) {
-                arr[i] = valTwo;
-                arr[i + 1] = valOne;
-                swapped = true;
-            }
-        }
-    } while (swapped);
-
-    return arr;
+    if (val > middleVal) {
+        return binarySearch(arr, val, middleIndex + 1, end);   
+    } else {
+        return binarySearch(arr, val, start, middleIndex - 1);
+    }
 }
 
-const testArr = [4, 5, 1, 9, 10, 6, 20, 50, 3];
-const sortedArr = bubbleSort(testArr);
-console.log(sortedArr);
+const testArr = [1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15];
+const foundIndex = binarySearch(testArr, 10);
+console.log(foundIndex); // 5
 
+const testArrTwo = [1, 54, 100, 200, 500];
+const foundIndexTwo = binarySearch(testArrTwo, 100);
+console.log(foundIndexTwo); // 2
 
-const testArrTwo = [423, 23, 3434, 2, 5, 112, 9, 44, 2, 5, 1, 2];
-const sortedArrTwo = bubbleSort(testArrTwo);
-console.log(sortedArrTwo);
+const testArrThree = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+const foundIndexThree = binarySearch(testArrThree, 10);
+console.log(foundIndexThree); // 0

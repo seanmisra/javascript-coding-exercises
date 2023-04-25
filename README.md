@@ -37,3 +37,4 @@ Commits correspond to each exercise
 33. Sort an array of objects by a given property
 34. 4 ways to delete an element from an array
 35. Implement Bubble Sort with JS
+36. Implement Binary Search with JS (using recursion)
