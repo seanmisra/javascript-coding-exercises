@@ -1,24 +1,28 @@
-// FIRST METHOD
-const myArr = [1, 2, 3, 4, 5];
-delete myArr[0];
-console.log(myArr); // notice that element 0 is now empty
-console.log(myArr.length) // 5
+function bubbleSort(arr) {
+    let swapped = false;
 
-// SECOND METHOD
-let myArrTwo = [1, 2, 3, 4, 5];
-myArrTwo = myArrTwo.filter(x => x !== 1);
-console.log(myArrTwo);
-console.log(myArrTwo.length); // 4
+    do {
+        swapped = false;
+        for (let i = 0; i < arr.length; i++) {
+            const valOne = arr[i];
+            const valTwo = arr[i + 1];
 
-// THIRD METHOD
-const myArrThree = [1, 2, 3, 4, 5];
-myArrThree.shift();
-console.log(myArrThree);
-console.log(myArrThree.length); // 4
+            if (valOne > valTwo) {
+                arr[i] = valTwo;
+                arr[i + 1] = valOne;
+                swapped = true;
+            }
+        }
+    } while (swapped);
 
-// FOURTH METHOD
-const myArrFour = [1, 2, 3, 4, 5];
-const index = myArrFour.indexOf(1);
-myArrFour.splice(index, 1); 
-console.log(myArrFour);
-console.log(myArrFour.length); // 4
+    return arr;
+}
+
+const testArr = [4, 5, 1, 9, 10, 6, 20, 50, 3];
+const sortedArr = bubbleSort(testArr);
+console.log(sortedArr);
+
+
+const testArrTwo = [423, 23, 3434, 2, 5, 112, 9, 44, 2, 5, 1, 2];
+const sortedArrTwo = bubbleSort(testArrTwo);
+console.log(sortedArrTwo);
