@@ -38,3 +38,4 @@ Commits correspond to each exercise
 34. 4 ways to delete an element from an array
 35. Implement Bubble Sort with JS
 36. Implement Binary Search with JS (using recursion)
+37. Use Map to count how many times each element occurs in array
