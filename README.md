@@ -39,3 +39,4 @@ Commits correspond to each exercise
 35. Implement Bubble Sort with JS
 36. Implement Binary Search with JS (using recursion)
 37. Use Map to count how many times each element occurs in array
+38. Get HTML in 3 different ways (via DOM)
