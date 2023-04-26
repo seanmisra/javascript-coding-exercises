@@ -40,3 +40,4 @@ Commits correspond to each exercise
 36. Implement Binary Search with JS (using recursion)
 37. Use Map to count how many times each element occurs in array
 38. Get HTML in 3 different ways (via DOM)
+39. Write function to determine if stringA can be arranged into stringB (i.e. anagram)
