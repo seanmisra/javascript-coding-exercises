@@ -42,3 +42,4 @@ Commits correspond to each exercise
 38. Get HTML in 3 different ways (via DOM)
 39. Write function to determine if stringA can be arranged into stringB (i.e. anagram)
 40. Write function to determine what pairs in array equal a given value (no repeats)
+41. Use fetch API to call API, handle results/errors
