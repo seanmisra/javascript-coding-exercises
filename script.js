@@ -1,37 +1,36 @@
-function testAnagram(stringA, stringB) {
-    if (stringA.length !== stringB.length) {
-        return false;
-    }
-
-    firstArr = stringA.split("");
-    secondArr = stringB.split("");
-
-    firstArr.sort();
-    secondArr.sort();
-
-    const test = firstArr.every((elem, index) => {
-        return secondArr[index] === elem;
+function findPairs(arr, targetVal) {
+    const allPairs = []
+    arr.forEach((val, index) => {
+        arr.forEach((valTwo, indexTwo) => {
+            // second condition helps avoid duplicates
+            if (index !== indexTwo && index > indexTwo) {
+                if (val + valTwo === targetVal) {
+                    const newPair = [val, valTwo];
+                    if (checkPairDoesNotExist(allPairs, newPair)) {
+                        allPairs.push(newPair);
+                    }
+                }
+            }
+        });
     });
-    return test;
+    return allPairs;
 }
 
-const str1 = "silent";
-const str2 = "listen";
+// avoid all repeats (including flipped)
+function checkPairDoesNotExist(arr, arrPair) {
+    return arr.every(subArr => JSON.stringify(subArr) !== JSON.stringify(arrPair))
+        && 
+        arr.every(subArr => JSON.stringify(subArr.reverse()) !== JSON.stringify(arrPair))
+}
 
-// positive case
-const test = testAnagram(str1, str2);
-console.log(test);
+const sampleArr = [1, 5, 5, 9, 7, 3];
+const allPairs = findPairs(sampleArr, 10);
+console.log(allPairs);
 
-const str3 = "elbow";
-const str4 = "below";
+const sampleArrTwo = [20, 0, 10, 10, 10, 10, 5, 15, 7, 2];
+const allPairsTwo = findPairs(sampleArrTwo, 20);
+console.log(allPairsTwo);
 
-// positive case
-const testTwo = testAnagram(str3, str4);
-console.log(testTwo);
-
-const str5 = "testing";
-const str6 = "testinging";
-
-// negative case
-const testThree = testAnagram(str5, str6);
-console.log(testThree);
+const sampleArrThree = [15, 15, 20, 10, 5, 25, 25, 5, 9, 35, 12, -5];
+const allPairsThree = findPairs(sampleArrThree, 30);
+console.log(allPairsThree);
